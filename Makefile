@@ -4,7 +4,8 @@ PORT = /dev/ttyACM0
 SPEED = 115200
 
 SRC =	main.c \
-	src/usart.c
+	src/usart.c \
+	src/ring_buffer.c
 
 all:
 	avr-gcc -Wall -Os -DF_CPU=$(F_CPU) -mmcu=$(DEVICE) $(SRC)

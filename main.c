@@ -14,11 +14,9 @@ int main(void) {
   init_led();  
   USART0_init(BAUD_RATE(115200));
 
-  SREG |= BIT(7);
-
   while(1) {
-    
-    
+    USART0_print("All is fine!\n");
+    _delay_ms(250);
   }
 
   //Unreachable
